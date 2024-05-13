@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результати пошуку</title>
+</head>
+<body>
+    <h1>Результати пошуку</h1>
+    <p>Пошуковий запит: {{ query }}</p>
+    <ul>
+        {% for contact in results %}
+            <li>{{ contact.name }} - {{ contact.phone }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Повернутися до контактів</a>
+</body>
+</html>
