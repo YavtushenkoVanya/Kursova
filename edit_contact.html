@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редагувати контакт</title>
+</head>
+<body>
+    <h1>Редагувати контакт</h1>
+    <form action="/edit_contact/{{ contact.id }}" method="POST">
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" name="name" value="{{ contact.name }}"><br><br>
+
+        <label for="address">Адреса:</label>
+        <input type="text" id="address" name="address" value="{{ contact.address }}"><br><br>
+
+        <label for="email">Електронна пошта:</label>
+        <input type="email" id="email" name="email" value="{{ contact.email }}"><br><br>
+
+        <label for="phone">Телефон:</label>
+        <input type="text" id="phone" name="phone" value="{{ contact.phone }}"><br><br>
+
+        <button type="submit">Зберегти зміни</button>
+    </form>
+    <a href="/">Повернутися до контактів</a>
+</body>
+</html>
