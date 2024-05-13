@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Контакти</h1>
+        <ul>
+            {% for contact in contacts %}
+            <li>
+                {{ contact.name }} - {{ contact.phone }}
+                <a href="{{ url_for('edit_contact', contact_id=contact.id) }}">Редагувати</a>
+                <a href="{{ url_for('delete_contact', contact_id=contact.id) }}">Видалити</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('add_contact') }}">Додати контакт</a>
+        <a href="{{ url_for('search_results') }}">Пошук контактів</a>
+    </div>
+</body>
+</html>
