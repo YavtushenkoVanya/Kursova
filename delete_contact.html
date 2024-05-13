@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видалити контакт</title>
+</head>
+<body>
+    <h1>Видалити контакт</h1>
+    <p>Ви впевнені, що хочете видалити контакт "{{ contact.name }}"?</p>
+    <form action="/delete_contact/{{ contact.id }}" method="POST">
+        <button type="submit">Так, видалити</button>
+    </form>
+    <a href="/">Скасувати</a>
+</body>
+</html>
